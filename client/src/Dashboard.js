@@ -16,12 +16,12 @@ export class Dashboard extends React.Component {
     <div>
       <Pet
         type="cat"
-        onAdoptPet={() => console.log('cat adopted')}
+        onAdoptPet={() => this.props.dispatch(catActions.adoptCat())}
         petToAdopt={this.props.cat}
       />
       <Pet 
         type="dog"
-        onAdoptPet={() => console.log('dog adopted')}
+        onAdoptPet={() => this.props.dispatch(dogActions.adoptDog())}
         petToAdopt={this.props.dog}
       />
     </div>
