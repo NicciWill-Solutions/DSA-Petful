@@ -1,5 +1,5 @@
-//import { REACT_APP_API_BASE_URL } from '../config';
-const REACT_APP_API_BASE_URL = 'http://localhost:8080/api'
+import { API_BASE_URL } from '../config';
+//const REACT_APP_API_BASE_URL = 'http://localhost:8080/api'
 
 export const FETCH_DOG_REQUEST = 'FETCH_DOG_REQUEST';
 export const fetchDogRequest = () => ({
@@ -21,7 +21,7 @@ export const fetchDogError = (error) => ({
 
 export const fetchDog = () => dispatch => {
   dispatch(fetchDogRequest());
-  fetch(`${REACT_APP_API_BASE_URL}/dog`)
+  fetch(`${API_BASE_URL}/dog`)
     .then(res => {
       if(!res.ok){
         console.log('There was a problem');
@@ -39,7 +39,7 @@ export const fetchDog = () => dispatch => {
 export const adoptDog = () => dispatch => {
   const dogInit = { method: 'DELETE'};
   dispatch(fetchDogRequest());
-  fetch(`${REACT_APP_API_BASE_URL}/dog`, dogInit)
+  fetch(`${API_BASE_URL}/dog`, dogInit)
     .then(res => {
       if(!res.ok){
         console.log("Something went wrong");

@@ -1,5 +1,5 @@
-//import { REACT_APP_API_BASE_URL } from '../config';
-const REACT_APP_API_BASE_URL = 'http://localhost:8080/api'
+import { API_BASE_URL } from '../config';
+//const REACT_APP_API_BASE_URL = 'http://localhost:8080/api'
 
 export const FETCH_CAT_REQUEST = 'FETCT_CAT_REQUEST';
 export const fetchCatRequest = () => ({
@@ -21,7 +21,7 @@ export const fetchCatError = error => ({
 
 export const fetchCat = () => dispatch => {
   dispatch(fetchCatRequest());
-  fetch(`${REACT_APP_API_BASE_URL}/cat`)
+  fetch(`${API_BASE_URL}/cat`)
     .then(res => {
       if(!res.ok) {
         console.log('There was a problem');
@@ -39,7 +39,7 @@ export const fetchCat = () => dispatch => {
 export const adoptCat = () => dispatch => {
   const catInit = { method: 'DELETE'};
   dispatch(fetchCatRequest());
-  fetch(`${REACT_APP_API_BASE_URL}/cat`, catInit)
+  fetch(`${API_BASE_URL}/cat`, catInit)
     .then(res => {
       if(!res.ok){
         console.log("Something went wrong");
