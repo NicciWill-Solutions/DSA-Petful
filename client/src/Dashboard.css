@@ -1,0 +1,12 @@
+div {
+  display: flex;
+  margin: 30px auto;
+}
+
+img {
+  max-width: 400px;
+}
+
+section {
+  margin: 0 50px;
+}
