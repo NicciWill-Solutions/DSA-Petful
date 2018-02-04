@@ -11,6 +11,8 @@ This is a web app for an animal shelter that allows adoption of cats and dogs. T
 ## Data Structure Used
 * Queue
 
-### Live Demo
+### Live Links
 
-https://determined-euclid-8df8f6.netlify.com/
+Netlify: https://determined-euclid-8df8f6.netlify.com/
+
+Heroku: https://dsa-petful.herokuapp.com/api/dog
