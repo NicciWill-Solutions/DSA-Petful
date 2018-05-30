@@ -7,6 +7,7 @@ This is a web app for an animal shelter that allows adoption of cats and dogs. T
 * React
 * Redux
 * Express
+* Node
 
 ## Data Structure Used
 * Queue
